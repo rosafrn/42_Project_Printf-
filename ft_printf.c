@@ -6,24 +6,29 @@
 /*   By: rosferna <rosferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 15:52:40 by rosferna          #+#    #+#             */
-/*   Updated: 2022/01/26 18:33:51 by rosferna         ###   ########.fr       */
+/*   Updated: 2022/01/27 20:20:53 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
-#include <unistd.h>
+#include "ft_printf.h"
 
-int	ft_specifiers(const char* spcf)
+int	ft_specifiers(const char *spcf)
 {
-	if (spcf == 'c')
-	if (spcf == 's')
-	if (spcf == 'p')
-	if (spcf == 'd')
-	if (spcf == 'i')
-	if (spcf == 'u')
-	if (spcf == 'x')
-	if (spcf == 'X')
-	if (spcf == '%')
+	int	count;
+
+	if (spcf == 'c' || spcf == 's' || spcf == '%')
+		count = ft_string(const char *spcf);
+	else if (spcf == 'p')
+		count = ft_pointer(unsigned long int spcf);
+	else if (spcf == 'd' || spcf == 'i')
+		count = ft_decimal_integer(int spcf);
+	else if (spcf == 'u')
+		count = ft_unsigned_decimal(unsigned int spcf);
+	else if (spcf == 'x')
+		count = ft_hex_num_lowercase(unsigned int spcf);
+	else if (spcf == 'X')
+		count = ft_hex_num_uppercase(unsigned int spcf);
+	return (count);
 }
 
 int	ft_printf(const char *format, ...)
