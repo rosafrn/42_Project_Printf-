@@ -6,7 +6,7 @@
 /*   By: rosferna <rosferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 16:45:33 by rosferna          #+#    #+#             */
-/*   Updated: 2022/01/27 17:32:16 by rosferna         ###   ########.fr       */
+/*   Updated: 2022/01/28 18:45:11 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_string(const char *s)
 	int	i;
 
 	i = 0;
-	while (s[i] != '/0')
+	while (s[i] != '\0')
 	{
 		write(1, &s[i], 1);
 		i++;

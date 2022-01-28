@@ -6,7 +6,7 @@
 /*   By: rosferna <rosferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 15:52:40 by rosferna          #+#    #+#             */
-/*   Updated: 2022/01/27 20:20:53 by rosferna         ###   ########.fr       */
+/*   Updated: 2022/01/28 18:43:35 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,41 +14,43 @@
 
 int	ft_specifiers(const char *spcf)
 {
-	int	count;
+	va_list	list;
+	int	counter;
 
-	if (spcf == 'c' || spcf == 's' || spcf == '%')
-		count = ft_string(const char *spcf);
-	else if (spcf == 'p')
-		count = ft_pointer(unsigned long int spcf);
-	else if (spcf == 'd' || spcf == 'i')
-		count = ft_decimal_integer(int spcf);
-	else if (spcf == 'u')
-		count = ft_unsigned_decimal(unsigned int spcf);
-	else if (spcf == 'x')
-		count = ft_hex_num_lowercase(unsigned int spcf);
-	else if (spcf == 'X')
-		count = ft_hex_num_uppercase(unsigned int spcf);
-	return (count);
+	counter = 0;
+	if (*spcf == 'c' || *spcf == 's' || *spcf == '%')
+		counter = ft_string(va_arg(list, const char *));
+	else if (*spcf == 'p')
+		counter = ft_pointer(va_arg(list, unsigned long int));
+	else if (*spcf == 'd' || *spcf == 'i')
+		counter = ft_decimal_integer(va_arg(list, int));
+	else if (*spcf == 'u')
+		counter = ft_unsigned_decimal(va_arg(list, unsigned int));
+	else if (*spcf == 'x')
+		counter = ft_hex_num_lowercase(va_arg(list, unsigned int));
+	else if (*spcf == 'X')
+		counter = ft_hex_num_uppercase(va_arg(list, unsigned int));
+	return (counter);
 }
 
 int	ft_printf(const char *format, ...)
 {
 	va_list	list;
-	int		count;
+	int		counter;
 
-	count = 0;
+	counter = 0;
 	va_start(list, format);
 	while (*format != '\0')
 	{
 		if (*format == '%')
 		{
-			count += ft_specifiers(format++);
-			va_arg(list, (void *));
+		//counter += ((int (*)())ft_func_select(format[i++]))(va_arg(n_arg, void *));
+			counter += ft_specifiers(format++);
 		}
 		else
-			count += write(1, &format, 1);
+			counter += write(1, &format, 1);
 		format++;
 	}
 	va_end(list);
-	return (count);
+	return (counter);
 }
