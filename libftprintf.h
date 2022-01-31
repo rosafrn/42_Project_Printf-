@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hex_num_lowercase.c                             :+:      :+:    :+:   */
+/*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rosferna <rosferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/27 16:44:56 by rosferna          #+#    #+#             */
-/*   Updated: 2022/01/31 15:37:41 by rosferna         ###   ########.fr       */
+/*   Created: 2022/01/27 16:45:23 by rosferna          #+#    #+#             */
+/*   Updated: 2022/01/31 15:38:16 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#ifndef		LIBFTPRINTF_H
+# define	LIBFTPRINTF_H
 
-int	ft_hex_num_lowercase(unsigned int n)
-{
-	static int	counter = 1;
-	char *hex;
+#include <stdarg.h>
+#include <unistd.h>
+#include <stdio.h>
 
-	hex = "0123456789abcdef";
-	if (n >= 16)
-	{
-		ft_hex_num_lowercase(n / 16);
-		counter++;
-	}
-	n = n % 16;
-	write(1, &hex[n], 1);
-	return (counter);
+int	ft_hex_num_lowercase(unsigned int n);
+int	ft_hex_num_uppercase(unsigned int n);
+int	ft_decimal_integer(int n);
+int	ft_pointer(unsigned long int n);
+int	ft_string(const char *s);
+int	ft_unsigned_decimal(unsigned int n);
 
-}
+#endif

@@ -6,11 +6,11 @@
 /*   By: rosferna <rosferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 16:45:13 by rosferna          #+#    #+#             */
-/*   Updated: 2022/01/28 17:47:05 by rosferna         ###   ########.fr       */
+/*   Updated: 2022/01/31 15:37:48 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 int	ft_aux(unsigned long int n);
 

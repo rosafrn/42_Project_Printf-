@@ -6,11 +6,11 @@
 /*   By: rosferna <rosferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 16:45:00 by rosferna          #+#    #+#             */
-/*   Updated: 2022/01/27 20:16:06 by rosferna         ###   ########.fr       */
+/*   Updated: 2022/01/31 15:37:45 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 int	ft_hex_num_uppercase(unsigned int n)
 {

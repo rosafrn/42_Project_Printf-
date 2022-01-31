@@ -6,7 +6,7 @@
 #    By: rosferna <rosferna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/28 17:52:02 by rosferna          #+#    #+#              #
-#    Updated: 2022/01/28 18:30:10 by rosferna         ###   ########.fr        #
+#    Updated: 2022/01/31 15:37:25 by rosferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,8 @@ SRCS =	ft_printf.c\
 		ft_pointer.c
 
 OBJS = $(SRCS:.c=.o)
-INCS = ft_printf.h
-NAME = ft_printf.a
+INCS = libftprintf.h
+NAME = libftprintf.a
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)

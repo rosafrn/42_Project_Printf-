@@ -6,11 +6,11 @@
 /*   By: rosferna <rosferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 15:52:40 by rosferna          #+#    #+#             */
-/*   Updated: 2022/01/28 18:43:35 by rosferna         ###   ########.fr       */
+/*   Updated: 2022/01/31 15:37:51 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 int	ft_specifiers(const char *spcf)
 {

@@ -6,11 +6,11 @@
 /*   By: rosferna <rosferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 16:45:33 by rosferna          #+#    #+#             */
-/*   Updated: 2022/01/28 18:45:11 by rosferna         ###   ########.fr       */
+/*   Updated: 2022/01/31 15:37:55 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 int	ft_string(const char *s)
 {
