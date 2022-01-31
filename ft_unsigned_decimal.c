@@ -6,22 +6,22 @@
 /*   By: rosferna <rosferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 16:45:37 by rosferna          #+#    #+#             */
-/*   Updated: 2022/01/31 15:37:59 by rosferna         ###   ########.fr       */
+/*   Updated: 2022/01/31 20:54:35 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_unsigned_decimal(unsigned int n)
 {
-	static int counter = 1;
+	int	counter;
 
+	counter = 0;
 	if (n >= 10)
 	{
-		ft_unsigned_decimal(n / 10);
-		counter++;
+		counter += ft_unsigned_decimal(n / 10);
 	}
 	n = n % 10 + 48;
-	write(1, &n, 1);
+	counter += write(1, &n, 1);
 	return (counter);
 }
