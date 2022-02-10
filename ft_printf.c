@@ -6,7 +6,7 @@
 /*   By: rosferna <rosferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 15:52:40 by rosferna          #+#    #+#             */
-/*   Updated: 2022/01/31 20:55:58 by rosferna         ###   ########.fr       */
+/*   Updated: 2022/02/10 15:06:01 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ int	ft_printf(const char *format, ...)
 			i++;
 			if (ft_strchr("csidupxX", format[i]))
 			{
-				counter += ((int (*)())ft_specifiers(format[i++]))
-					(va_arg(list, void *));
+				counter += ft_specifiers(list, format[i++]);
 				continue ;
 			}
 		}

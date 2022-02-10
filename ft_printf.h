@@ -6,7 +6,7 @@
 /*   By: rosferna <rosferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 16:45:23 by rosferna          #+#    #+#             */
-/*   Updated: 2022/01/31 20:57:33 by rosferna         ###   ########.fr       */
+/*   Updated: 2022/02/10 15:07:10 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include <unistd.h>
 
 int		ft_printf(const char *format, ...);
-void	*ft_specifiers(char spcf);
-int		ft_char(char c);
+int		ft_specifiers(va_list list, char spcf);
+int		ft_char(int c);
 int		ft_hex_num_lowercase(unsigned int n);
 int		ft_hex_num_uppercase(unsigned int n);
 int		ft_decimal_integer(int n);
